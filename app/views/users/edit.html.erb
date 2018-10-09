@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <a hrf="users/new">
+        <%= image_tag 'logo.jpg' %>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="login-form mt-5">
+        <h1>Just a few quick thing to set up your account...</h1>
+        <%= form_for @user do |f| %>
+          <div class="form-group">
+            <label>Full name</label>
+            <%= f.text_field :name,:class=>"form-control validate[required,custom[fullname]]",:placeholder=>"Full name" %>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <%= f.password_field :password,:class=>"form-control validate[required,custom[password]]",:placeholder=>"Password" %>
+            <hr>
+            <p class="form-text text-muted">Passwords must be at least 6 characters long and can’t be the ngs like”password”, “123456” or “abcdef</p>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-success text-center">Ready! <i class="fa fa-arrow-right"></i></button>
+          </div>
+        <%end%>   
+      </div>
+    </div>
+  </div>
+</div>
