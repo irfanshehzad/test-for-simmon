@@ -251,6 +251,12 @@
           },
           "alertText": "* Password can’t be the like 'password', '123456' or 'abcdef'"
         },
+        "password_length": {
+          "func": function (field, rules, i, options) {
+            return (field.val().length < 6) ? false : true;
+          },
+          "alertText": "* Passwords must be at least 6 characters long"
+        },
       };
 
     }
