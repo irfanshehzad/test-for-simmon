@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Neuton:400,800" rel="stylesheet">
   </head>
 
-  <body>
+  <body style="font-size: <%= controller.action_name == 'edit' ? '2rem;' : '1rem;' %>">
     <%= render partial: "/messages"%>
     <%= yield %>
   </body>
